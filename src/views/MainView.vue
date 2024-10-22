@@ -1,7 +1,7 @@
 <script setup>
+import Search from '@/components/Search.vue';
 </script>
 
 <template>
-  <main>
-  </main>
+  <Search />
 </template>

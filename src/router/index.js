@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import BoilerPlate from '../views/BoilerPlate.vue'
 import MainView from '../views/MainView.vue'
 
 const router = createRouter({
@@ -8,6 +9,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: MainView
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: BoilerPlate
     }
     // {
     //   path: '/about',
