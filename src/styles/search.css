@@ -1,0 +1,12 @@
+.searchbar {
+  width: 10vw;
+  height: 2vh;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+}
+
+.searchbar:focus {
+  border: 1px solid black;
+  border-radius: 5px;
+}
