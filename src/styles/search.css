@@ -1,4 +1,8 @@
 .searchbar {
+  position: relative;
+}
+
+.searchbar > input {
   width: 10vw;
   height: 2vh;
   border: 1px solid gray;
@@ -6,7 +10,26 @@
   outline: none;
 }
 
+.searchbar ul {
+  position: absolute;
+  left: -75%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+ul > li {
+  height: 5vh;
+}
+
 .searchbar:focus {
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.search-result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 25vw;
 }
