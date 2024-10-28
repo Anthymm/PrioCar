@@ -1,11 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
-import json from './data.json'
+import { RouterView } from 'vue-router'
 
-const localJson = ref(json)
 </script>
 
 <template>
-  <RouterView :data="localJson" />
+  <RouterView />
 </template>
