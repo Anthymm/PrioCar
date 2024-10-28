@@ -13,6 +13,11 @@ const router = createRouter({
       path: '/test',
       name: 'test',
       component: () => import('../views/BoilerPlate.vue')
+    },
+    {
+      path: '/:id',
+      name: "product",
+      component: () => import('../views/ProductView.vue')
     }
     // {
     //   path: '/about',

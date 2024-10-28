@@ -15,12 +15,27 @@ const express = require('express'),
 const app = express(),
   port = process.env.PORT || 3000
 
-app.get('/fetch/all', (_request, response) => {
-  const { callback } = client.query(
-    'SELECT * FROM cars'
-  )
-  response.send({ callback })
+app.get('/api/fetch', async (req, res) => {
+  if (req.query.amount == "all") {
+    res.send(await client.query(
+      "SELECT * FROM cars"
+    ))
+  }
 })
+
+app.get('/api/user', async (req, res) => {
+  const result = await client.query(
+    "SELECT * FROM users WHERE USERNAME = $1",
+    [req.query.username]
+  )
+  res.send(result.rows[0])
+})
+
+app.get('/api/register', (req, res) => {
+  console.log(req)
+})
+
+
 
 app.use(express.static(path.join(path.resolve(), 'dist')))
 
