@@ -8,13 +8,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: MainView,
+      component: () => import('../views/MainView.vue'),
       props: true,
     },
     {
       path: '/test',
       name: 'test',
-      component: BoilerPlate
+      component: () => import('../views/BoilerPlate.vue')
     }
     // {
     //   path: '/about',
