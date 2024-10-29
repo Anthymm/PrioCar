@@ -15,9 +15,15 @@ const router = createRouter({
       component: () => import('../views/BoilerPlate.vue')
     },
     {
-      path: '/:id',
-      name: "product",
-      component: () => import('../views/ProductView.vue')
+      path: '/item',
+      name: "item",
+      children: [
+        {
+          path: '/item/:id',
+          name: 'itemid',
+          component: () => import('../views/ProductView.vue'),
+        }
+      ]
     }
     // {
     //   path: '/about',

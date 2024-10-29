@@ -20,7 +20,13 @@ app.get('/api/fetch', async (req, res) => {
     res.send(await client.query(
       "SELECT * FROM cars"
     ))
+  } else {
+    res.send(await client.query(
+      "SELECT * FROM cars WHERE id = $1",
+      [req.query.amount]
+    ))
   }
+
 })
 
 app.get('/api/user', async (req, res) => {

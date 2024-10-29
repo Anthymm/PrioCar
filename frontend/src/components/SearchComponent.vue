@@ -1,9 +1,9 @@
 <template>
   <div class="searchbar">
-    <input type="search" @focus="state = true" @blur="state = false">
-    <ul v-if="state == true">
+    <input type="search" @focus="state = true">
+    <ul v-if="state == true" @mouseleave=" state = false ">
       <li v-for="(data, key) in data" :key="key">
-        <div class="search-result">Namn:{{ data.brand }} Modell:{{ data.model }} År: {{ data.year }}</div>
+        <button @click="() => {router.push('/item/' + data.id)}" class="search-result">Namn:{{ data.brand }} Modell:{{ data.model }} År: {{ data.year }}</button>
       </li>
     </ul>
   </div>
@@ -12,6 +12,8 @@
 <script setup>
 import { ref } from 'vue';
 import '../styles/search.css'
+import { useRouter } from 'vue-router';
+const router = useRouter()
 
 const state = ref(false)
 

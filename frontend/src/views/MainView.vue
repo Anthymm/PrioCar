@@ -15,7 +15,7 @@ defineProps({
     <User />
   </nav>
   <section class="search">
-    <Search />
+    <Search :data="data"/>
   </section>
   <section class="grid-section">
     <div class="product-grid">

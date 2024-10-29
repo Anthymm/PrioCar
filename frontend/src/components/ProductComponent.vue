@@ -1,11 +1,14 @@
 <script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
 defineProps({
   data: Object
 })
 </script>
 
 <style scoped>
-div {
+button {
   width: 100%;
   height: 100%;
   display: flex;
@@ -16,9 +19,9 @@ div {
 </style>
 
 <template>
-  <div>
+  <button @click="() => {router.push('/item/' + data.id)}">
     <p>Märke: {{ data.brand }}</p>
     <p>Modell: {{ data.model }}</p>
     <p>År: {{ data.year }}</p>
-  </div>
+  </button>
 </template>
