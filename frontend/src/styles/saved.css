@@ -1,10 +1,11 @@
-button {
+.savedButton {
   position: relative;
   width: 5vw;
   height: 3vh;
   margin: 32px;
   background-color: none;
-  border: none;
+  border: 3px solid gray;
+  border-radius: 4px;
 }
 
 ul {
@@ -14,7 +15,14 @@ ul {
 .saved-container {
   position: absolute;
   top: 100%;
-  right: 0;
+  left: -5.3vw;
   width: 10vw;
   border: 3px solid gray;
+  border-radius: 4px;
+}
+
+.savedItem {
+  width: 100%;
+  padding: 4px;
+  border: none;
 }

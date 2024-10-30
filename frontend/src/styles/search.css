@@ -5,19 +5,19 @@
 .searchbar>input {
   width: 20vw;
   height: 3vh;
-  border: 1px solid gray;
+  border: 2px solid black;
   border-radius: 5px;
   outline: none;
 }
 
 .searchbar ul {
   position: absolute;
-  left: -12.5%;
-  border: 1px solid gray;
+  left: 0;
+  border: 2px solid black;
   border-radius: 5px;
   z-index: 100;
   background-color: whitesmoke;
-  width: 25vw;
+  width: 20vw;
 }
 
 ul>li {
@@ -28,7 +28,7 @@ ul>li {
 }
 
 .searchbar:focus {
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
 }
 
@@ -39,9 +39,14 @@ ul>li {
   height: 90%;
   width: 25vw;
   margin: 0;
-  font-size: 1vw;
+  font-size: 0.75vw;
+  border: none;
 }
 
 .search-result:hover {
   background-color: lightgray;
+}
+
+* {
+  box-sizing: border-box;
 }

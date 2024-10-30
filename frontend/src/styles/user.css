@@ -1,10 +1,11 @@
-button {
+.userButton {
   position: relative;
   width: 5vw;
   height: 3vh;
   margin: 32px;
   background-color: none;
   border: 3px solid gray;
+  border-radius: 4px;
 }
 
 button:hover {
@@ -16,6 +17,7 @@ ul {
 }
 
 .saved-container {
+  border-radius: 4px;
   position: absolute;
   top: 100%;
   right: 0;

@@ -1,5 +1,5 @@
 <template>
-  <button @click="() => { show = true }">
+  <button @click="() => { show = true }" class="userButton">
     <div v-if="loggedIn" >{{ user.currentUser }}
       <div v-if="show && loggedIn" class="saved-container" @mouseleave="show = false">
         <ul>

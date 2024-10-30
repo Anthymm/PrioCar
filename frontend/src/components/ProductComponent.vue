@@ -49,7 +49,7 @@ img{
 
 <template>
   <button @click="() => {router.push('/item/' + data.id)}">
-    <img v-if="data.image" :src="data.image" alt="">
+    <img v-if="data.image" :src="data.image" alt=""></img>
     <div>
     <div>
       <div>

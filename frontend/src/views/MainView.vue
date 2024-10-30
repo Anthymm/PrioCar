@@ -24,7 +24,7 @@ defineProps({
   </section>
   <section class="grid-section">
     <div class="product-grid">
-      <Product v-for="item in data" :data="item" />
+      <Product v-for="item in data" :data="item"/>
     </div>
   </section>
 
