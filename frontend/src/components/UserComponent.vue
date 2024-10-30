@@ -1,7 +1,7 @@
 <template>
-  <button @click="() => { show = !show }">
-    <div v-if="loggedIn">{{ user.currentUser }}
-      <div v-if="show && loggedIn" class="saved-container">
+  <button @click="() => { show = true }">
+    <div v-if="loggedIn" >{{ user.currentUser }}
+      <div v-if="show && loggedIn" class="saved-container" @mouseleave="show = false">
         <ul>
           <li>
             PROFIL
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div v-else>LOG IN/REGISTER
-      <div v-if="show" class="saved-container">
+      <div v-if="show" class="saved-container" @mouseleave="show = false">
         <ul v-if="!register">
           <li>
             <p>Username:</p>
@@ -42,7 +42,7 @@
 </template>
 
 <script setup>
-import '../styles/saved.css'
+import '../styles/user.css'
 import { ref } from 'vue';
 import { useUserStore } from '@/stores/user'
 

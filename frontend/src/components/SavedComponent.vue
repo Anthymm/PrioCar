@@ -1,6 +1,6 @@
 <template>
-  <button @click="() => { show = !show }">SPARADE
-    <div v-if="show" class="saved-container">
+  <button @click="() => { show = true }">SPARADE
+    <div v-if="show" class="saved-container" @mouseleave="show = false">
       <ul>
         <li>
           DETTA ÄR EN LISTA

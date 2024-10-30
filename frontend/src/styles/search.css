@@ -3,8 +3,8 @@
 }
 
 .searchbar>input {
-  width: 10vw;
-  height: 2vh;
+  width: 20vw;
+  height: 3vh;
   border: 1px solid gray;
   border-radius: 5px;
   outline: none;
@@ -12,7 +12,7 @@
 
 .searchbar ul {
   position: absolute;
-  left: -75%;
+  left: -12.5%;
   border: 1px solid gray;
   border-radius: 5px;
   z-index: 100;
@@ -39,4 +39,9 @@ ul>li {
   height: 90%;
   width: 25vw;
   margin: 0;
+  font-size: 1vw;
+}
+
+.search-result:hover {
+  background-color: lightgray;
 }

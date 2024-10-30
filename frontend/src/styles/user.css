@@ -4,7 +4,11 @@ button {
   height: 3vh;
   margin: 32px;
   background-color: none;
-  border: none;
+  border: 3px solid gray;
+}
+
+button:hover {
+  background-color: lightgray;
 }
 
 ul {
@@ -16,5 +20,5 @@ ul {
   top: 100%;
   right: 0;
   width: 10vw;
-  border: 3px solid black;
+  border: 3px solid gray;
 }
